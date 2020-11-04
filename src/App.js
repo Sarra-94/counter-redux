@@ -1,23 +1,25 @@
 import React from "react";
 import "./App.css";
-import { connect, useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "./JS/Actions/action";
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement } from "./JS/Actions/actionCounter";
 function App() {
-  // useSelector replace mapStateToProps
+  // hook redux
+  // useselector replace mapStateToProps
   const counter = useSelector((state) => state.count.counter);
-  // replace mapDispatchToProps
   const dispatch = useDispatch();
   return (
     <div className="App">
-      <h1>Counter Redux+{counter}</h1>
+      <h1>workshop Redux</h1>
+      <h1>{counter}</h1>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
     </div>
   );
 }
-
 // const mapStateToProps = (state) => {
-//   return { count: state.count.counter };
+//   return {
+//     counter: state.count.counter,
+//   };
 // };
 // const mapDispatchToProps = (dispatch) => {
 //   return {
@@ -25,6 +27,5 @@ function App() {
 //     decrement: () => dispatch(decrement()),
 //   };
 // };
-// using mapState & mapDispatch
 // export default connect(mapStateToProps, mapDispatchToProps)(App);
-export default connect()(App);
+export default App;

@@ -1,8 +1,8 @@
-import { INCREMENT, DECREMENT } from "../Constans/actionType";
+import { DECREMENT, INCREMET } from "../Constants/actionTypes";
 
 export const increment = () => {
   return {
-    type: INCREMENT,
+    type: INCREMET,
   };
 };
 export const decrement = () => {
