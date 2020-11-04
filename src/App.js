@@ -13,6 +13,7 @@ function App() {
       <h1>{counter}</h1>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
+      <p>adding todo branch</p>
     </div>
   );
 }
